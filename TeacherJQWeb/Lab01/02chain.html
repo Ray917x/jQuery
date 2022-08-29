@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02chain.html</title>    
+</head>
+<body>
+    <h1>write less, do more1</h1>
+    <h1>write less, do more2</h1>
+    <h1>write less, do more3</h1>
+    <h1>write less, do more4</h1>
+    <h1>write less, do more5</h1>     
+    
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+    <script>
+        $(document).ready(function(){
+        //    $("h1").css("color","green");
+        //    $("h1").mouseover(function(){  匿名函數
+        //        $(this).css("color","red");
+        //         // console.log(this);  //目前元素 物件
+        //         // console.log($(this));  //目前選擇器 selector
+        //         // console.log($(this).css("color","red").css("color"));  //rgb(255,0,0)
+        //         //$(this).css("color","red") 回傳是jQuery selector
+
+        //         // console.log($(this).css("color").css("color","red")); 
+        //         //$(this).css("color") 回傳是 string
+        //    });
+        //    $("h1").mouseout(function(){
+        //        $(this).css("color","green");
+        //    });        
+
+            // function over(){  //函數宣告
+            //     $(this).css("color","green");
+            // }
+            // function out(){
+            //     $(this).css("color","blue");
+            // }
+            // $("h1").css("color","blue").mouseover(over).mouseout(out);
+
+            let over=(event)=>{  //箭頭函數
+                console.log(this);
+                let that=event.currentTarget;
+                $(that).css("color","green");
+            }
+            let out=(event)=>{
+                $(event.currentTarget).css("color","blue");
+            }
+            $("h1").css("color","blue").mouseover(over).mouseout(out);
+        });
+    </script>
+
+</body>
+</html>

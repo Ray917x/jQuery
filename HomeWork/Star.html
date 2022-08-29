@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="utf-8">
+    <title>StarHomeWork</title>
+</head>
+
+<body>
+    <div>
+        <img id="img1" class="i" src="img/star.gif" />
+        <img id="img1" class="i" src="img/star.gif" />
+        <img id="img1" class="i" src="img/star.gif" />
+        <img id="img1" class="i" src="img/star.gif" />
+        <img id="img1" class="i" src="img/star.gif" />
+    </div>
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $("img").hover(function () {
+            $(this).prevAll().prop("src", "img/chngstar.gif");
+        }, function () {
+            $(this).prop("src", "img/star.gif");
+        })           
+    </script>
+</body>
+
+
+</html>
